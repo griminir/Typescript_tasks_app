@@ -10,6 +10,7 @@ const loadTasks = (): Task[] => {
   const storedTasks = localStorage.getItem('tasks');
   return storedTasks ? JSON.parse(storedTasks) : [];
 };
+
 //puts localstorage tasks in the task array
 const tasks: Task[] = loadTasks();
 
@@ -71,7 +72,6 @@ const createMainView = createView(
 // function for adding a task
 const addTask = (task: Task): void => {
   tasks.push(task);
-  console.log(tasks);
 };
 
 // function for updating storage
